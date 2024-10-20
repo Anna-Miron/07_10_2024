@@ -1,14 +1,19 @@
 // functii
 // functii simple
+// aici doar am definit functia
 function logHelloToConsole() {
     console.log("Hello");
 }
 
+// aici am apelat functia
+// o putem apela de nenumarate ori
+
 logHelloToConsole();
 logHelloToConsole();
 logHelloToConsole();
 
-// functii cu parametrii
+// functii cu parametrii 
+// Cream GE Docs = >> /** + Enter. Hinturi pentru cine foloseste functiile noastre.
 /**
  * This functions logs in console the mathemathical equation 
  * and the result of adding a to b.
@@ -17,7 +22,7 @@ logHelloToConsole();
  */
 function logSum(a, b) {
     let sum = a + b;
-    console.log(`${a} + ${b} = ${sum}`);
+    console.log(`${a} + ${b} = ${sum}`); //string interpolation (`${a}`)
 }
 
 logSum(12, 33);
@@ -41,14 +46,17 @@ let result2 = getSum(result1, 21);
 console.log(`Computed sum of ${result1} and 21 is ${result2}`);
 
 // functii anonime
-const sayHello = function () {
+//E recomandat sa salvam functiile in constante(const) - de regula nu se schimba.
+const sayHello = function () { //definim o constanta in care salvam codul functiei
     console.log('hello');
 }
 
 sayHello();
 sayHello();
 
-function modifyWithCallBack(name, callback) {
+//exemplu functii anonime
+
+function modifyWithCallBack(name, callback) { //sau modfied function
     const modifiedName = callback(name);
     return modifiedName;
 }
@@ -60,7 +68,7 @@ const modified = modifyWithCallBack('david', function (name) {
 console.log(modified);
 
 // functii sageata (Arrow functions)
-// functii sageata - funtii anonime - pot fi salvate intr o variabila cons
+// functii sageata - funtii anonime - pot fi salvate intr-o variabila cons - fara acolade
 
 const sayGoodbye = () => console.log("Goodbye!");
 
